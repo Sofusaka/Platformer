@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         float jump = Input.GetAxis("Jump");
-        if (jump > 0)
+        if (jump > 0 && CheckGround.isGrounded)
         {
             rigidBody2d.linearVelocity = new Vector2(rigidBody2d.linearVelocity.x, speed);
 
